@@ -1,4 +1,4 @@
-import com.balsam.chapter01.model.Country;
+import mybatis.entry.to.mastery.chapter01.model.Country;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

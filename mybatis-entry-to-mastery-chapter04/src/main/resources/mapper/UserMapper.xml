@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.balsam.chapter04.mapper.UserMapper">
+<mapper namespace="mybatis.entry.to.mastery.chapter04.mapper.UserMapper">
 
     <resultMap id="userMap" type="SysUser">
         <id property="id" column="id"/>
@@ -18,7 +18,7 @@
         select * from sys_user where id = #{id}
     </select>
 
-    <select id="selectAll1" resultType="com.balsam.chapter04.model.SysUser">
+    <select id="selectAll1" resultType="mybatis.entry.to.mastery.chapter04.model.SysUser">
         SELECT
           id,
           user_name userName,
@@ -31,7 +31,7 @@
           sys_user
     </select>
 
-    <select id="selectAll2" resultType="com.balsam.chapter04.model.SysUser">
+    <select id="selectAll2" resultType="mybatis.entry.to.mastery.chapter04.model.SysUser">
         SELECT
           id,
           user_name,
@@ -44,7 +44,7 @@
           sys_user
     </select>
 
-    <select id="selectRoleByUserId" resultType="com.balsam.chapter04.model.SysRole">
+    <select id="selectRoleByUserId" resultType="mybatis.entry.to.mastery.chapter04.model.SysRole">
         SELECT
           r.id,
           r.role_name,
@@ -109,7 +109,7 @@
         delete from sys_user where id = #{id}
     </delete>
 
-    <select id="selectRolesByUserIdAndRoleEnabled" resultType="com.balsam.chapter04.model.SysRole">
+    <select id="selectRolesByUserIdAndRoleEnabled" resultType="mybatis.entry.to.mastery.chapter04.model.SysRole">
 	    select
 			r.id,
 			r.role_name roleName,
@@ -123,7 +123,7 @@
 	    where u.id = #{userId} and r.enabled = #{enabled}
 	</select>
 
-    <select id="selectByUser" resultType="com.balsam.chapter04.model.SysUser">
+    <select id="selectByUser" resultType="mybatis.entry.to.mastery.chapter04.model.SysUser">
         select id,
         user_name userName,
         user_password userPassword,
@@ -188,7 +188,7 @@
             #{createTime, jdbcType=TIMESTAMP})
     </insert>
 
-    <select id="selectByIdOrUserName" resultType="com.balsam.chapter04.model.SysUser">
+    <select id="selectByIdOrUserName" resultType="mybatis.entry.to.mastery.chapter04.model.SysUser">
         select id,
         user_name userName,
         user_password userPassword,
@@ -211,7 +211,7 @@
         </choose>
     </select>
 
-    <select id="selectByUser2" resultType="com.balsam.chapter04.model.SysUser">
+    <select id="selectByUser2" resultType="mybatis.entry.to.mastery.chapter04.model.SysUser">
         select id,
         user_name userName,
         user_password userPassword,
@@ -257,7 +257,7 @@
         where id = #{id}
     </update>
 
-    <select id="selectByIdList" resultType="com.balsam.chapter04.model.SysUser">
+    <select id="selectByIdList" resultType="mybatis.entry.to.mastery.chapter04.model.SysUser">
         select id,
         user_name userName,
         user_password userPassword,
@@ -293,7 +293,7 @@
         where id = #{id}
     </update>
 
-    <select id="selectByUser3" resultType="com.balsam.chapter04.model.SysUser">
+    <select id="selectByUser3" resultType="mybatis.entry.to.mastery.chapter04.model.SysUser">
         select id,
         user_name userName,
         user_password userPassword,
@@ -313,11 +313,11 @@
         </where>
     </select>
 
-    <select id="selectByUser4" resultType="com.balsam.chapter04.model.SysUser" databaseId="mysql">
+    <select id="selectByUser4" resultType="mybatis.entry.to.mastery.chapter04.model.SysUser" databaseId="mysql">
         select * from sys_user where user_name like concat('%', #{userName}, '%')
     </select>
 
-    <select id="selectByUser5" resultType="com.balsam.chapter04.model.SysUser">
+    <select id="selectByUser5" resultType="mybatis.entry.to.mastery.chapter04.model.SysUser">
         select *
         from sys_user
         <where>
@@ -330,8 +330,8 @@
         </where>
     </select>
 
-    <select id="selectByUser6" resultType="com.balsam.chapter04.model.SysUser">
-        <bind name="print" value="@com.balsam.chapter04.util.StringUtil@print(_parameter)"/>
+    <select id="selectByUser6" resultType="mybatis.entry.to.mastery.chapter04.model.SysUser">
+        <bind name="print" value="@mybatis.entry.to.mastery.chapter04.util.StringUtil@print(_parameter)"/>
         select id,
         user_name userName,
         user_password userPassword,
@@ -341,7 +341,7 @@
         create_time createTime
         from sys_user
         <where>
-            <if test="@com.balsam.chapter04.util.StringUtil@isNotEmpty(userName)">
+            <if test="@mybatis.entry.to.mastery.chapter04.util.StringUtil@isNotEmpty(userName)">
                 and user_name like concat('%', #{userName}, '%')
             </if>
             <if test="userEmail != '' and userEmail != null">

@@ -25,6 +25,6 @@
         </environment>
     </environments>
     <mappers>
-        <package name="com.balsam.chapter03.mapper" />
+        <package name="mybatis.entry.to.mastery.chapter03.mapper" />
     </mappers>
 </configuration>

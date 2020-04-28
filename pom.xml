@@ -13,6 +13,7 @@
         <module>mybatis-entry-to-mastery-chapter02</module>
         <module>mybatis-entry-to-mastery-chapter03</module>
         <module>mybatis-entry-to-mastery-chapter04</module>
+        <module>mybatis-entry-to-mastery-chapter05</module>
     </modules>
 
     <dependencies>

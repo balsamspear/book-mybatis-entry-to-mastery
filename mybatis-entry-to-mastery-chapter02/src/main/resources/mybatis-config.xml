@@ -10,7 +10,7 @@
     </settings>
 
     <typeAliases>
-        <package name="com.balsam.chapter02.model"/>
+        <package name="mybatis.entry.to.mastery.chapter02.model"/>
     </typeAliases>
 
     <environments default="development">
@@ -25,6 +25,6 @@
         </environment>
     </environments>
     <mappers>
-        <package name="com.balsam.chapter02.mapper" />
+        <package name="mybatis.entry.to.mastery.chapter02.mapper" />
     </mappers>
 </configuration>

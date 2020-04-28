@@ -1,7 +1,7 @@
-import com.balsam.chapter04.MyMapperProxy;
-import com.balsam.chapter04.mapper.UserMapper;
-import com.balsam.chapter04.model.SysRole;
-import com.balsam.chapter04.model.SysUser;
+import mybatis.entry.to.mastery.chapter04.MyMapperProxy;
+import mybatis.entry.to.mastery.chapter04.mapper.UserMapper;
+import mybatis.entry.to.mastery.chapter04.model.SysRole;
+import mybatis.entry.to.mastery.chapter04.model.SysUser;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,7 +14,7 @@ public class UserMapperTest extends BaseMapperTest {
     @Test
     public void testSelectById001() {
         try (SqlSession sqlSession = getSqlSession()) {
-            SysUser sysUser = sqlSession.selectOne("com.balsam.chapter02.mapper.UserMapper.selectById", 1);
+            SysUser sysUser = sqlSession.selectOne("mybatis.entry.to.mastery.chapter04.mapper.UserMapper.selectById", 1);
             System.out.println(sysUser);
         }
     }

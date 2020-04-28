@@ -1,5 +1,5 @@
-import com.balsam.chapter03.mapper.PrivilegeMapper;
-import com.balsam.chapter03.model.SysPrivilege;
+import mybatis.entry.to.mastery.chapter03.mapper.PrivilegeMapper;
+import mybatis.entry.to.mastery.chapter03.model.SysPrivilege;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
 import org.junit.Test;

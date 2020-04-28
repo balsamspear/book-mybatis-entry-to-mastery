@@ -9,7 +9,7 @@
     </settings>
     
     <typeAliases>
-        <package name="com.balsam.chapter01.model"/>
+        <package name="mybatis.entry.to.mastery.chapter01.model"/>
     </typeAliases>
     
     <environments default="development">

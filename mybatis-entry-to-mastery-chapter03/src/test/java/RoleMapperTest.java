@@ -1,5 +1,5 @@
-import com.balsam.chapter03.mapper.RoleMapper;
-import com.balsam.chapter03.model.SysRole;
+import mybatis.entry.to.mastery.chapter03.mapper.RoleMapper;
+import mybatis.entry.to.mastery.chapter03.model.SysRole;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Assert;
 import org.junit.Test;
