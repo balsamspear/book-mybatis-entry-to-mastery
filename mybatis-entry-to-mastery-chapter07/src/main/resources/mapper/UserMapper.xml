@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.entry.to.mastery.chapter07.mapper.UserMapper">
+
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache" />
+<!--    <cache type="org.mybatis.caches.redis.RedisCache" />-->
+<!--	<cache-ref namespace="mybatis.entry.to.mastery.chapter07.mapper.RoleMapper" />-->
+
+    <select id="selectById" resultType="mybatis.entry.to.mastery.chapter07.model.SysUser">
+        select * from sys_user where id = #{id}
+    </select>
+
+    <select id="selectByIdNoCache" flushCache="true" resultType="mybatis.entry.to.mastery.chapter07.model.SysUser">
+        select * from sys_user where id = #{id}
+    </select>
+
+    <delete id="deleteById">
+        delete from sys_user where id = #{id}
+    </delete>
+
+    <select id="selectUserAndRoleById" resultType="mybatis.entry.to.mastery.chapter07.model.SysUser">
+		select
+		   	u.id,
+		   	u.user_name userName,
+		    u.user_password userPassword,
+		    u.user_email userEmail,
+		    u.user_info userInfo,
+		    u.head_img headImg,
+		    u.create_time createTime,
+			r.id "role.id",
+			r.role_name "role.roleName",
+			r.enabled "role.enabled",
+			r.create_by "role.createBy",
+			r.create_time "role.createTime"
+		from sys_user u
+		inner join sys_user_role ur on u.id = ur.user_id
+		inner join sys_role r on ur.role_id = r.id
+		where u.id = #{id}
+	</select>
+</mapper>
