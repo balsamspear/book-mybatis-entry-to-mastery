@@ -16,7 +16,20 @@
         <module>mybatis-entry-to-mastery-chapter05</module>
         <module>mybatis-entry-to-mastery-chapter06</module>
         <module>mybatis-entry-to-mastery-chapter07</module>
+        <module>mybatis-entry-to-mastery-chapter09</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>5.2.5.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
