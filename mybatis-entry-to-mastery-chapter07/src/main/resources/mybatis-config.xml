@@ -15,8 +15,8 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
-                <property name="username" value="root"/>
+                <property name="url" value="jdbc:mysql://47.115.12.248:3306/mybatis"/>
+                <property name="username" value="test"/>
                 <property name="password" value="123456"/>
             </dataSource>
         </environment>
