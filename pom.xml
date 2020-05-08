@@ -17,6 +17,7 @@
         <module>mybatis-entry-to-mastery-chapter06</module>
         <module>mybatis-entry-to-mastery-chapter07</module>
         <module>mybatis-entry-to-mastery-chapter09</module>
+        <module>mybatis-entry-to-mastery-chapter08</module>
     </modules>
 
     <dependencyManagement>
